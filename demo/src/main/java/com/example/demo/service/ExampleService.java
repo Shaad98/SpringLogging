@@ -1,13 +1,19 @@
 package com.example.demo.service;
 
-import lombok.extern.slf4j.Slf4j;
+// import lombok.extern.slf4j.Slf4j;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-@Slf4j // Lombok annotation to auto-generate SLF4J logger
+// @Slf4j // Lombok annotation to auto-generate SLF4J logger
 @Service
 public class ExampleService {
 
+    private final Logger log = LoggerFactory.getLogger(ExampleService.class);
+
     public String processData(String input) {
+
         // Log at different levels
         log.trace("Entering processData with input: {}", input);
         log.debug("Processing data for input: {}", input);
